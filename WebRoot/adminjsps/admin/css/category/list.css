@@ -1,0 +1,40 @@
+body {
+	 background: #D2E9FF; 
+}
+
+table {
+	font-family: 宋体;
+	font-size: 13pt;
+	border-color: rgb(78, 78, 78);
+	width: 60%;
+}
+
+a {text-decoration: none; color: #9F4D95;}
+a:visited {color: #018BD3;}
+a:hover {color:#FF6600; text-decoration: underline;}
+
+td {
+	padding: 5px;
+}
+
+.trTitle {
+	background: #84C1FF;
+	color: blue;
+	height:35px;
+}
+
+.trOneLevel {
+	background-color: #fff;
+	font-weight: 900;
+	text-align: center;
+}
+
+.captionAddOneLevel {
+	line-height: 30px;
+	font-weight: bold;
+}
+
+.trTwoLevel {
+	text-align: left;
+	font-size: 11pt;
+}

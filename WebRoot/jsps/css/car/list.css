@@ -1,0 +1,17 @@
+.pic { display: block; position: relative; margin-bottom: 3px; width: 200px; height: 200px; }
+.inner {overflow:hidden;text-overflow:ellipsis;word-break:keep-all;white-space:nowrap; border: solid 3px #fff; padding: 16px 16px 0; position: absolute; }
+ul{list-style-type: none;}
+li {float: left; width: 240px; height: 335px; line-height: 18px; position: relative; border-bottom: solid 1px #e5e5e5; }
+li div {margin-bottom:1px;margin-left: 10px;}
+
+
+body,ul, li, p,img, div { margin: 0; padding: 0; list-style-type: none; font-size: 12px;}
+.price {padding-bottom: 3px;}
+.price_n {color: #CD0000; font-weight: bold; padding-right: 10px; font-family: Arial; }
+.price_s {color: #CD0000; font-family: Arial; }
+.price_r {color: #848484; text-decoration: line-through; padding-right: 10px; font-family: Arial; }
+#carname {text-decoration:underline; color:black; display: block; overflow: hidden; width: 200px; font-family: Arial; }
+#carname:hover {color:#191970; }
+.inner a {color: #0000FF;}
+.inner a:hover {color:#436EEE; }
+.inner a:VISITED {color:#8B2323;}

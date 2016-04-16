@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+
+.divCenter {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+td {
+	font-family: verdana,helvetica,arial,sans-serif;
+	border: 1px solid #B1CDE3;
+	background: #fff;
+	font-size:12px;
+	padding: 10px 10px 10px 20px;
+	color: #4f6b72;
+	margin:0;
+}
+
+.tableCenter {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+input[type="text"]{
+	width: 90%;
+}
+
+.fileName {
+	padding: 5px 30px 5px 10px;
+	float: left;
+	font-size: 16px;
+}
