@@ -27,6 +27,7 @@
 			margin:0px;
 			border-color: #2894FF;
 			font-size:20px;
+			padding-left:5px;
 		}
 		a {
 			text-transform:none;

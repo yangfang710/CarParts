@@ -12,13 +12,34 @@
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
 <style type="text/css">
 	table {
 		color: #404040;
 		font-size: 10pt;
+	}
+	.searchTab td{
+			padding-right:15px;
+		}
+		.searchinput{
+			width:180px;
+			height:23px;
+			line-height:23px;
+			padding-left:5px;
+			color:#aaa;
+			margin:5px;
+		}
+		.btn{
+			text-align:center;
+		}
+	.linkBtn{
+		/* border-radius:4px; */
+			color:#fff;
+			background:#5093e1;
+			border:none;
+			height:35px;
+			line-height:35px;
+			
+			 width:60px;
 	}
 </style>
   </head>
@@ -29,21 +50,21 @@
 <table align="center">
 	<tr>
 		<td>名称：</td>
-		<td><input type="text" name="cname"/></td>
+		<td><input class="searchinput" type="text" name="cname"/></td>
 	</tr>
 	<tr>
 		<td>排量：</td>
-		<td><input type="text" name="paiLiang"/></td>
+		<td><input class="searchinput" type="text" name="paiLiang"/></td>
 	</tr>
 	<tr>
 		<td>燃油：</td>
-		<td><input type="text" name="oil"/></td>
+		<td><input class="searchinput" type="text" name="oil"/></td>
 	</tr>
 	<tr>
 		<td>&nbsp;</td>
-		<td>
-			<input type="submit" value="搜　　索"/>
-			<input type="reset" value="重新填写"/>
+		<td class="btn">
+			<input class="linkBtn" type="submit" value="搜索"/>
+			<input class="linkBtn" type="reset" value="重置"/>
 		</td>
 	</tr>
 </table>

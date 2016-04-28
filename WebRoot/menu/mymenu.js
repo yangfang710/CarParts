@@ -113,15 +113,15 @@ MenuBar的toString()方法
 */
 Q6MenuBar.prototype.toString = function() {
 	// menuBar对应的<div>
-	var str = '<div style="border:1px solid' + this.colors[this.colorStyle].menuBorderColor + ';color:' + this.colors[this.colorStyle].menuBarColor + ';" class = "menuBar" name="menuBar" onClick="' + this.obj + '.showMenu(event, this)">\n';
+	var str = '<div class = "menuBar" name="menuBar">\n';
 	// menuBar的标题<div>
-	str += '<div style="background-color:' + this.colors[this.colorStyle].menuBgColor + ';" class="barTitle" name="barTitle"><span class="barTitleText">' + this.barName + '</span></div>\n';
+	str += '<div class="barTitle" name="barTitle"><span class="barTitleText">' + this.barName + '</span></div>\n';
 	// 使用循环添加每个菜单对应的HTML代码。
 	for(var menuName in this.menus) {
 		str += this.menu2Str(menuName);
 	}
 	// menuBar尾部对应的<div>
-	str += '<div style="background-color:' + this.colors[this.colorStyle].menuBgColor + ';" name="barBottom" class="barBottom">';
+	str += '<div name="barBottom" class="barBottom">';
 	str += '</div>';
 	return str;
 }
@@ -136,9 +136,9 @@ Q6MenuBar.prototype.menu2Str = function(menuName){
 	// 菜单对应的<div>
 	var str = '<div name="menu">\n';
 	// 菜单标题对应的<div>，其中包含icon与text两部分。
-	str += '<div style="background-color:' + this.colors[this.colorStyle].menuBgColor + ';border-right-color:' + this.colors[this.colorStyle].menuBorderColor + ';border-bottom-color:' + this.colors[this.colorStyle].menuBorderColor + ';" name="menuTitle" class="menuTitle"><span name="menuTitleIcon" class="menuTitleIcon"><img src="' + icon + '"/></span><span class="menuTitleText">' + menuName + '</span></div>\n';
+	str += '<div name="menuTitle" class="menuTitle"><span name="menuTitleIcon" class="menuTitleIcon"></span><span class="menuTitleText">' + menuName + '</span></div>\n';
 	// 菜单内容对象的<div>，所有菜单荐都存放在这个<div>中。
-	str += '<div style="color:' + this.colors[this.colorStyle].menuContentColor + ';" class="menuContent"  name="menuContent">\n';
+	str += '<div class="menuContent hide"  name="menuContent">\n';
 	// 使用循环添加每个MenuItem对应的HTML
 	for(var i = 0; i < this.menus[menuName].length; i++) {
 		str += this.item2Str(this.menus[menuName][i]);
@@ -152,7 +152,7 @@ Q6MenuBar.prototype.menu2Str = function(menuName){
  * 该方法生成menuItem对应的HTML代码。
  */
 Q6MenuBar.prototype.item2Str = function(menuItem){
-	return '<div style="border:1px solid ' + this.colors[this.colorStyle].itemBorderColor + ';background-color:' + this.colors[this.colorStyle].itemBgColor + '; color:' + this.colors[this.colorStyle].itemColor + ';" class="menuItem" onMouseMove="' + this.obj + '.itemMouseMove(this)" onMouseOut="' + this.obj + '.itemMouseOut(this)" onClick="skip(\'' + menuItem.url + '\', \'' + menuItem.frameName + '\')">' + menuItem.menuItemName + '</div>\n';
+	return '<div class="menuItem" onClick="skip(\'' + menuItem.url + '\', \'' + menuItem.frameName + '\')">' +'<span class="secondImg"></span>'+ menuItem.menuItemName + '</div>\n';
 }
 
 function skip(url, frameName) {
@@ -173,11 +173,10 @@ function skip(url, frameName) {
 	只有点击：div menuTitle、img、menuTitleText，才获取父元素。
 	如果父元素是menuContent，返回null。
 */
-Q6MenuBar.prototype.getCurrMenu = function(res) {
+/*Q6MenuBar.prototype.getCurrMenu = function(res) {
 	tagName = res.tagName;
 	name = res.getAttribute("name");
 	while(tagName != "DIV" || name != "menu") {
-//		alert(tagName + ", " + name);
 		res = res.parentNode;
 		if(!res) {
 			return null;
@@ -189,25 +188,25 @@ Q6MenuBar.prototype.getCurrMenu = function(res) {
 		}
 	}
 	return res;
-}
+}*/
 
-Q6MenuBar.prototype.attr = function(ele, attrName) {
+/*Q6MenuBar.prototype.attr = function(ele, attrName) {
 	if(ele.getAttribute)  {
 		return ele.getAttribute(attrName);
 	}
 	return null;
-}
+}*/
 
-Q6MenuBar.prototype.showMenu = function(evt, menuBar) {
+/*Q6MenuBar.prototype.showMenu = function(evt, menuBar) {
 	var e = evt ? evt : window.event;
 	var res = e.srcElement || e.target;
 	var menu = this.getCurrMenu(res);//获取当前被点击的menu
 	if(!menu) return;
 	this.openMenu(menuBar, menu);
-}
+}*/
 
 // 打开或关闭menu
-Q6MenuBar.prototype.openMenu = function(menuBar, menu) {
+/*Q6MenuBar.prototype.openMenu = function(menuBar, menu) {
 	var childs = menu.childNodes;//获取menuBar的所有子元素
 	for(var i = 0; i < childs.length; i++) {
 		//因为Firefor中，换行会出现空白节点，所以需要小心。
@@ -229,18 +228,18 @@ Q6MenuBar.prototype.openMenu = function(menuBar, menu) {
 			}
 		}
 	}
-}
+}*/
 
 // 更换图片
-Q6MenuBar.prototype.changeImg = function (menu, flag) {
+/*Q6MenuBar.prototype.changeImg = function (menu, flag) {
 	var img = menu.getElementsByTagName("img")[0];
 	var jiaIcon = this.config.imgDir + this.icon.jiaIcon;
 	var jianIcon = this.config.imgDir + this.icon.jianIcon;
 	img.src = flag ? jiaIcon : jianIcon;
-}
+}*/
 
 // 关闭所有menu
-Q6MenuBar.prototype.closeMenu = function(menuBar) {
+/*Q6MenuBar.prototype.closeMenu = function(menuBar) {
 	var menus = menuBar.childNodes;
 	//获取menuBar中所有menu
 	for(var i=0; i < menus.length; i++) {
@@ -253,9 +252,9 @@ Q6MenuBar.prototype.closeMenu = function(menuBar) {
 		}
 		this.changeImg(menus[i], true);
 	}
-}
+}*/
 
-Q6MenuBar.prototype.itemMouseMove = function(e) {
+/*Q6MenuBar.prototype.itemMouseMove = function(e) {
 	e.style.border = "1px solid " + this.colors[this.colorStyle].itemBorderMoveColor;
 	e.style.backgroundColor = this.colors[this.colorStyle].itemBgMoveColor;
 	e.style.color = this.colors[this.colorStyle].itemMoveColor;
@@ -267,4 +266,4 @@ Q6MenuBar.prototype.itemMouseOut = function(e) {
 	e.style.backgroundColor = this.colors[this.colorStyle].itemBgColor;
 	e.style.color = this.colors[this.colorStyle].itemColor;
 	e.style.fontWeight = "";
-}
+}*/

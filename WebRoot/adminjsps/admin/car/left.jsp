@@ -49,5 +49,32 @@ $(function() {
   
   <body >
 <div id="menu"></div>
+<script>
+  $(function(){
+	  var menuTitles=$(".menuTitle"),menuItems=$(".menuItem"),menuTitleIcons=$(".menuTitleIcon");
+	  var imgs=["icon1.png","icon2.png","icon3.png","icon4.png"];
+	  /*一级菜单样点击之后变换式  */
+	   for(var i=0;i<menuTitles.length;i++){
+			$(menuTitles[i]).click(function(e){
+				$(menuTitles).removeClass("active");
+				$(".menuContent").addClass("hide");
+				$(this).addClass("active"); 
+				$(this).next(".menuContent").removeClass("hide");
+			});
+		} 
+	   /*二级菜单样点击之后变换式  */
+	   for(var i=0;i<menuItems.length;i++){
+			$(menuItems[i]).click(function(e){
+				$(menuItems).removeClass("active");
+				$(this).addClass("active"); 
+			});
+		} 
+	   /* 一级菜单图标初始化 */
+	   for(var i=1;i<=menuTitleIcons.length;i++){
+			$(menuTitleIcons[i]).css("background","url(../images/"+imgs[i]+") no-repeat");
+		}  
+  });
+  	
+  </script>
   </body>
 </html>
