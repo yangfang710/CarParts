@@ -1,8 +1,8 @@
 *{font-size:10pt;}
-body{/* text-align:center; */}
+body{/* text-align:center; */background:#eee;}
 .table{margin:0 auto; width:1200px;height:100%;border:1px solid #97CBFF;border-collapse: collapse;}
 .table td{border:1px solid #97CBFF;}
-.tdTop {text-align: center; height: 100px;}
+.tdTop {text-align: center; height: 100px;background:#fff;}
 .tdLeft{width: 200px;}
 .tdSearch{height: 75px; border-bottom-width: 0px; padding: 0px; margin: 0px;}
 .tdBody{border-top-width: 0px;}

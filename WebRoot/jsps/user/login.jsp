@@ -41,7 +41,7 @@
 	<br/>
 	<!--   <div><img src="<c:url value='/images/logo.bmp'/>" /></div>--> 
 	  <div>
-	    <div class="imageDiv"><img class="img" src="<c:url value='/images/zj.jpg'/>"/></div>
+	    <div class="imageDiv"><img class="img" src="<c:url value='/images/logo.jpg'/>"/></div>
         <div class="login1">
 	      <div class="login2">
             <div class="loginTopDiv">

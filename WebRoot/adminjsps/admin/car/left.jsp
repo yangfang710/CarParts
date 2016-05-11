@@ -47,7 +47,7 @@ $(function() {
 </script>
   </head>
   
-  <body >
+  <body class="myleft">
 <div id="menu"></div>
 <script>
   $(function(){
