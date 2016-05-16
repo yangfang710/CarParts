@@ -21,7 +21,7 @@
   </head>
   
   <body style="background: url(/CarParts/images/top.jpg) no-repeat; color: black;">
-	<div style="font-size:30px;font-weight:bold;text-align: left; line-height: 30px;margin-left:50px;margin-top:30px;float: left;">商品导购系统后台管理</div>
+	<div style="font-size:30px;font-weight:bold;text-align: left; line-height: 30px;margin-left:50px;margin-top:30px;float: left;">汽车配件销售系统后台管理</div>
 	<div style="text-align: right; line-height: 10px;margin-top:10px;">
 		<span style="padding-left:50px;margin-right:50px;font-size:16px">
 			<a href="<c:url value='/admin/AdminCategoryServlet?method=findAll'/>">类别管理</a>&nbsp;|&nbsp;

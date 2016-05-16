@@ -25,7 +25,7 @@
   </head>
   
   <body style="background: url(/CarParts/images/top.jpg) no-repeat; color: black;">
-	<div style="font-size:25px;font-weight:bold;text-align: left; line-height: 30px;margin-left:50px;margin-top:30px;float:left;">商品导购系统</div>
+	<div style="font-size:25px;font-weight:bold;text-align: left; line-height: 30px;margin-left:50px;margin-top:30px;float:left;">汽车配件销售系统</div>
 	<div style="text-align: right;font-size: 10pt; line-height: 10px;margin-top:5px;margin-right:5px;">
 		<c:choose>
 			<c:when test="${empty sessionScope.sessionUser }">
