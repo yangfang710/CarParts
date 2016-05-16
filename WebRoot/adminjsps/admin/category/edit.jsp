@@ -29,7 +29,7 @@
 		}
 	</script>
 <style type="text/css">
-	body {background: rgb(254,238,189);}
+	body {background:#eee;}
 </style>
   </head>
   

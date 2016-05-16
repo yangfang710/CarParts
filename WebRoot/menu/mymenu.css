@@ -21,6 +21,9 @@ a:active {
 .hide{
 	display:none;
 }
+.myleft{
+	background:#0A2A50;
+}
 /* 左边导航怒分，外面包含的div */
 #menu{
 	
@@ -28,16 +31,16 @@ a:active {
 
 .menuBar {
 width:200px;
-color:#333;
+color:#fff;
 font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
 }
 /* 标题部分 */
 .barTitle {
 height:65px;
 line-height:65px;
-background:#46A3FF;
+background:#0A2A50;
 font-weight:bold; 
-border-bottom:1px solid #3B7DFC;
+border-bottom:1px solid #5E738A;
 }
 /* 标题的字 */
 .barTitleText {
@@ -49,7 +52,8 @@ border-bottom:1px solid #3B7DFC;
 
 /* 一级菜单 */
 .menuTitle {
-background:#46A3FF;
+	/* background:#3879D9; */
+background:#0A2A50;
 width:180px;
 height:55px;
 line-height:55px;
@@ -58,7 +62,8 @@ text-align:left;
 padding-left:20px;
 }
 .menuTitle:hover{
-	background:#4588F0;
+	background:#3879D9;
+	/* background:#4588F0; */
 }
 .menuTitle.active{
 	background:#4588F0;
@@ -81,10 +86,10 @@ font-size:16px;
 }
 /* 二级菜单部分 */
 .menuContent {
-	color:#333;
+	color:#fff;
 	overflow:auto;
 	text-align:center;
-	background:#46A3FF;
+	background:#0A2A50;
 }
 
 
@@ -96,7 +101,7 @@ font-size:16px;
 	cursor:pointer;
 	border-left:1px solid #3B7DFC;
 	text-align:left;
-	color:#333;
+	color:#fff;
 }
 .menuItem:hover{
 	background:#5093E1;
@@ -114,7 +119,7 @@ font-size:16px;
 }
 /* 底部修饰 */
 .barBottom {
-background:#46A3FF;
+background:#0A2A50;
 width:200px;
 height:15px;
 }

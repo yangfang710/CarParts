@@ -18,15 +18,18 @@
 			body {
 				margin: 0px;
 			}
-			a {text-decoration: none; color: #454545;}
-			a:visited {color: #454545;}
+			a {text-decoration: none; color: #eee;}
+			a:visited {color: #eee;}
 			a:hover {color:#FF6600; text-decoration: none;}
 		</style>
   </head>
   
-  <body style="background: url(/CarParts/images/top.jpg) no-repeat; color: black;">
-	<div style="font-size:25px;font-weight:bold;text-align: left; line-height: 30px;margin-left:50px;margin-top:30px;float:left;">汽车配件销售系统</div>
-	<div style="text-align: right;font-size: 10pt; line-height: 10px;margin-top:5px;margin-right:5px;">
+<!--   <body style="background: url(/CarParts/images/top.jpg) no-repeat; color: black;"> -->
+<!-- 	<div style="font-size:25px;font-weight:bold;text-align: left; line-height: 30px;margin-left:50px;margin-top:30px;float:left;">汽车配件销售系统</div> -->
+<!-- 	<div style="text-align: right;font-size: 10pt; line-height: 10px;margin-top:5px;margin-right:5px;"> -->
+  <body style="background: #0A2A50; color: #fff;">
+	<div style="font-size:25px;font-weight:bold;text-align: left; line-height: 30px;margin-left:50px;margin-top:30px;float:left;">商品导购系统</div>
+	<div style="display:inline-block;float:right;padding-right:15px;font-size: 10pt;height:30px;line-height:30px;">
 		<c:choose>
 			<c:when test="${empty sessionScope.sessionUser }">
 				  你好，请<a href="<c:url value='/jsps/user/login.jsp'/>" target="_parent">登录</a>&nbsp; |&nbsp; 

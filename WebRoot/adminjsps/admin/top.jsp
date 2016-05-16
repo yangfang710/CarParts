@@ -14,15 +14,19 @@
 	<meta http-equiv="description" content="This is my page">
 	<style type="text/css">
 		body {font-size: 10pt;}
-		a {text-decoration:none;color: #454545;}
-		a:visited {color: #454545;}
+		a {text-decoration:none;color: #fff;}
+		a:visited {color: #fff;}
 		a:hover {color:#CD2626; text-decoration: underline;}
 	</style>
   </head>
   
-  <body style="background: url(/CarParts/images/top.jpg) no-repeat; color: black;">
-	<div style="font-size:30px;font-weight:bold;text-align: left; line-height: 30px;margin-left:50px;margin-top:30px;float: left;">汽车配件销售系统后台管理</div>
-	<div style="text-align: right; line-height: 10px;margin-top:10px;">
+<!--   <body style="background: url(/CarParts/images/top.jpg) no-repeat; color: black;"> -->
+<!-- 	<div style="font-size:30px;font-weight:bold;text-align: left; line-height: 30px;margin-left:50px;margin-top:30px;float: left;">汽车配件销售系统后台管理</div> -->
+<!-- 	<div style="text-align: right; line-height: 10px;margin-top:10px;"> -->
+
+  <body style="background: #0A2A50 ; color: #fff;">
+	<div style="font-size:30px;font-weight:bold;text-align: left; line-height: 30px;margin-left:50px;margin-top:30px;float: left;">商品导购系统后台管理</div>
+	<div style="display:inline-block;float:right;height:30px; line-height: 30px;padding-right:10px;">
 		<span style="padding-left:50px;margin-right:50px;font-size:16px">
 			<a href="<c:url value='/admin/AdminCategoryServlet?method=findAll'/>">类别管理</a>&nbsp;|&nbsp;
 			<a href="<c:url value='/adminjsps/admin/car/main.jsp'/>">配件管理</a>&nbsp;|&nbsp;
